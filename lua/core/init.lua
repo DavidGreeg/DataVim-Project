@@ -16,12 +16,13 @@ opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
 -- Indenting
-opt.expandtab = true
+opt.expandtab = false
+--opt.expandtab = true
+--opt.smartindent = true
+opt.softtabstop = 4 --modif
 opt.shiftwidth = 4 --modif
-opt.smartindent = true
 opt.autoindent = true --added
 opt.tabstop = 4 --modif
-opt.softtabstop = 4 --modif
 opt.smarttab = true --added
 
 opt.fillchars = { eob = " " }
@@ -34,7 +35,7 @@ opt.number = true
 opt.relativenumber = true --added
 opt.numberwidth = 2
 opt.ruler = false
-opt.scrolloff = 20
+opt.scrolloff = 25
 
 -- disable nvim intro
 opt.shortmess:append "sI"
