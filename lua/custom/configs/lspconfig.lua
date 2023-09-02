@@ -24,6 +24,8 @@ lspconfig.bashls.setup({
 	filetypes = {"sh"},
 })
 lspconfig.awk_ls.setup({
+-- this one couln't be installed via Mason, but directly running 
+-- 'sudo npm install -g "awk-language-server"' in terminal
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = {"awk"},
@@ -37,3 +39,5 @@ lspconfig.clangd.setup({
 	end,
 	capabilities = capabilities,
 })
+
+vim.diagnostic.config({ virtual_text = false })

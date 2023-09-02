@@ -38,7 +38,7 @@ local plugins = {
 
 				-- terminal
 				"bash-language-server",
-				"awk-language-server",
+				--"awk-language-server",
 
 				-- visualization
 					--[[

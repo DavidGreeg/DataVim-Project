@@ -82,7 +82,10 @@ i  }           *@<Lua 3218: ~/.local/share/nvim/lazy/nvim-autopairs/lua/nvim-aut
                  autopairs map key
 i  <Plug>(cmp.u.k.fallback_expr:<CR>) * <Lua 3199: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keymap.lua:147>
                  cmp.utils.keymap.set_map
+
+c	<C-R>		<Plug>(TelescopeFuzzyCommandSearch) ~/.local/share/nvim/lazy/telescope.nvim/plugin/telescope.lua
 c  <Plug>(TelescopeFuzzyCommandSearch) * <C-\>e "lua require('telescope.builtin').command_history { default_text = [=[" . escape(getcmdline(), '"') . "]=] }"<CR><CR>
+
 i  <C-D>       * <Lua 652: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keymap.lua:127>
                  cmp.utils.keymap.set_map
 i  <C-N>       * <Lua 654: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keymap.lua:127>
@@ -95,14 +98,17 @@ i  <S-Tab>     * <Lua 1137: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keym
                  cmp.utils.keymap.set_map
 i  <C-Space>   * <Lua 922: ~/.local/share/nvim/lazy/nvim-cmp/lua/cmp/utils/keymap.lua:127>
                  cmp.utils.keymap.set_map
+
 !  <Plug>luasnip-expand-repeat * <Lua 1017: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:38>
 !  <Plug>luasnip-delete-check * <Lua 997: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:31>
+
 i  <Plug>luasnip-jump-prev * <Lua 995: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:24>
 i  <Plug>luasnip-jump-next * <Lua 1021: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:21>
 i  <Plug>luasnip-prev-choice * <Lua 540: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:18>
 i  <Plug>luasnip-next-choice * <Lua 1013: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:15>
 i  <Plug>luasnip-expand-snippet * <Lua 731: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:12>
 i  <Plug>luasnip-expand-or-jump * <Lua 1024: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:9>
+
 i  <C-R>       * <Cmd>lua require("which-key").show("\18", {mode = "i", auto = true})<CR>
 c  <C-R>       * <Cmd>lua require("which-key").show("\18", {mode = "c", auto = true})<CR>
 i  <C-L>       * <Right>
