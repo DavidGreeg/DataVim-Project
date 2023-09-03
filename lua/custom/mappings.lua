@@ -1,27 +1,40 @@
 local M = {}
 local opt = vim.opt
+local map = vim.api.nvim_set_keymap
+
 -- This opt enables visual mode whenever pressing Shift:
 opt.keymodel = "startsel,stopsel"
+
+map('i', 'cs-S', [[<cmd> w <Enter>]], {noremap = true})
 
 -- To disable keymaps
 M.disabled = {
 	n = {
-		-- ["<C-n>"] = "",
-		["<leader>/"] = "",
+		["<C-s>"] = "",
+		-- ["<leader>/"] = "",
 	},
-	v = {
-		-- ["<C-s>"] = "",
-		["<leader>/"] = "",
-	}
+	-- i = {
+	-- 	["<C-s>"] = "",
+	-- },
+	-- v = {
+	-- 	-- ["<C-s>"] = "",
+	-- 	["<leader>/"] = "",
+	-- }
 }
+
 
 -- My custom mappings
 M.davidfm = {
+	x = {
+		["<M-x>"] = {'<Esc> "+d i', "Cut Selection"},
+		["<M-c>"] = {'<Esc> "+y i', "Copy Selection"},
+	},
 	n = {
-		["<leader>e"] = {"<cmd> NvimtreeToggle <Enter>", "Toggle Tree"},
+		["<leader>e"] = {"<cmd> NvimTreeToggle <Enter>", "Toggle Tree"},
 	},
 	i = {
-		["<C-s>"] = {"<cmd> w <Enter>", "Save File"}
+	 	["<C-S-s>"] = {'<cmd> w <Enter>', "Save File"},
+		["<C-S-v>"] = {'<Esc> p i', "Paste"},
 	},
 	-- v = {},
 	c = {
