@@ -1,70 +1,84 @@
-local M = {}
+local m = {}
 local opt = vim.opt
-local map = vim.api.nvim_set_keymap
+-- local map = vim.api.nvim_set_keymap
+-- local map_opts = { noremap = true, silent = true}
+-- local tsitter = require("plugins.configs.treesitter").options()
 
--- This opt enables visual mode whenever pressing Shift:
+-- this opt enables visual mode whenever pressing shift:
 opt.keymodel = "startsel,stopsel"
 
-map('i', 'cs-S', [[<cmd> w <Enter>]], {noremap = true})
+-- to disable keymaps
+-- m.disabled = {
+-- 	-- n = {
+-- 	-- 	["<C-s>"] = "",
+-- 	-- 	["<leader>ss"] = "",
+-- 	-- },
+-- 	-- i = {
+-- 	-- 	["<A-n>"] = "",
+-- 	-- 	["<A-v>"] = "",
+-- 	-- },
+-- 	-- v = {
+-- 	--  ["<leader>si"] = "",
+-- 	-- 	["<leader>/"] = "",
+-- 	-- }
+-- }
 
--- To disable keymaps
-M.disabled = {
+
+-- my custom mappings
+m.customized = {
 	n = {
-		["<C-s>"] = "",
-		-- ["<leader>/"] = "",
-	},
-	-- i = {
-	-- 	["<C-s>"] = "",
-	-- },
-	-- v = {
-	-- 	-- ["<C-s>"] = "",
-	-- 	["<leader>/"] = "",
-	-- }
-}
-
-
--- My custom mappings
-M.davidfm = {
-	x = {
-		["<M-x>"] = {'<Esc> "+d i', "Cut Selection"},
-		["<M-c>"] = {'<Esc> "+y i', "Copy Selection"},
-	},
-	n = {
-		["<leader>e"] = {"<cmd> NvimTreeToggle <Enter>", "Toggle Tree"},
+		["<leader>e"] = {"<cmd> NvimTreeToggle <enter>", "Explore File-Tree"},
 	},
 	i = {
-	 	["<C-S-s>"] = {'<cmd> w <Enter>', "Save File"},
-		["<C-S-v>"] = {'<Esc> p i', "Paste"},
+	 	["<A-w>"] = {'<cmd> w <enter>', "Save File"},
+		["<A-p>"] = {'<esc> pi', "Paste"},
+		["<A-q>"] = {'<esc>', "Quit to Normal Mode"},
 	},
-	-- v = {},
+	-- v = {
+	-- 	["<A-x>"] = {, },
+	-- 	["<A-c>"] = {, },
+	-- },
 	c = {
-		["<C-c>"] = {"<C-\\>e \"lua require('telescope.builtin').command_history "
-		.. '{ default_text = [=[" . escape(getcmdline(), \'"\') . "]=] }"<Enter><Enter>', "Fuzzy Command Search"},
-		["<C-k>"] = {"<cmd> Telescope keymaps <Enter>", "Fuzzy Keymap Search"},
-		["<C-v>"] = {"<cmd> Telescope lsp_document_symbols <Enter>", "Fuzzy Variable Search"}
+		["<C-c>"] = {"<c-\\>e \"lua require('telescope.builtin').command_history "
+		.. '{ default_text = [=[" . escape(getcmdline(), \'"\') . "]=] }"<enter><enter>', "Fuzzy Command Search"},
+		["<C-k>"] = {"<cmd> Telescope keymaps <enter>", "Fuzzy Keymap Search"},
+		["<C-v>"] = {"<cmd> Telescope lsp_document_symbols <enter>", "Fuzzy Variable Search"}
 	}
 }
 
--- My custom way of commenting
-M.comment = {
+-- This following code seems like cheating, the key maps were defined in 'custom.plugins'
+-- however, I could't find a work around the recommended key definition (inside the plugin opts)
+m.incremental_selection = {
+	n = {
+		["<leader>ss"] = {"<leader>ss", "Initiate Selection"},
+	},
+	x = {
+		["<leader>si"] = {"<leader>si", "Increment Selection"},
+		["<leader>sd"] = {"<leader>sd", "Decrement Selection"},
+	}
+}
+
+
+-- my custom way of commenting
+m.comment = {
   plugin = true,
 
   -- toggle comment in both modes
   n = {
     ["<leader>co"] = {
       function()
-        require("Comment.api").toggle.linewise.current()
+        require("comment.api").toggle.linewise.current()
       end,
-      "Toggle comment",
+      "Toggle Comment",
     },
   },
 
   v = {
     ["<leader>co"] = {
-      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-      "Toggle comment",
+      "<esc><cmd>lua require('comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+      "Toggle Comment",
     },
   },
 }
 
-return M
+return m

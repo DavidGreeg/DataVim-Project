@@ -21,6 +21,18 @@ local plugins = {
 				-- low level
 				"c"
 			},
+			-- The following code was added here instead of in the mappings file, because even tho the following 
+			-- map format kinda worked, it didn't totally perform as expected:
+			-- ["<leader>ss"] = {"<cmd> lua require('nvim-treesitter.incremental_selection').init_selection() <Enter>"},
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<leader>ss",
+					node_incremental = "<leader>si",
+					scope_incremental = false,
+					node_decremental = "<leader>sd",
+				}
+			},
 		},
 	},
 	{
