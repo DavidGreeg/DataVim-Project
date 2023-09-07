@@ -1,6 +1,6 @@
 ---@type ChadrcConfig 
  local M = {}
- M.ui = {theme = 'ayu_light'}
+ M.ui = {theme = 'aquarium'}
  M.plugins = 'custom.plugins'
  M.mappings = require 'custom.mappings'
  return M

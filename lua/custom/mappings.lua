@@ -67,7 +67,7 @@ m.comment = {
   n = {
     ["<leader>co"] = {
       function()
-        require("comment.api").toggle.linewise.current()
+        require("Comment.api").toggle.linewise.current()
       end,
       "Toggle Comment",
     },
@@ -75,7 +75,7 @@ m.comment = {
 
   v = {
     ["<leader>co"] = {
-      "<esc><cmd>lua require('comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+      "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
       "Toggle Comment",
     },
   },
