@@ -72,5 +72,39 @@ local plugins = {
 			require "custom.configs.lspconfig"
 		end,
 	},
+	{
+		"quarto-dev/quarto-nvim",
+		ft = { "quarto", "markdown", "Rmd" },
+		dev = false,
+		dependencies = {
+			"jmbuhr/otter.nvim",
+			dev = false,
+		},
+		opts = {
+			debug = false,
+			closePreviewOnExit = true,
+			lspFeatures = {
+				enabled = true,
+				languages = { 'r', 'python', 'bash' },
+				chunks = 'curly', -- 'curly' or 'all'
+				diagnostics = {
+					enabled = true,
+					triggers = { "BufWritePost" }
+				},
+				completion = {
+					enabled = true,
+				},
+			},
+			keymap = {
+				hover = 'K',
+				definition = 'gd',
+				type_definition = 'gD',
+				rename = '<leader>ra',
+				format = '<leader>fm',
+				references = 'gr',
+				document_symbols = 'gS',
+			},
+		}
+	}
 }
 return plugins
