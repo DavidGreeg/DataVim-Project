@@ -31,6 +31,13 @@ lspconfig.awk_ls.setup({
 	filetypes = {"awk"},
 })
 
+-- visual
+lspconfig.marksman.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = {"markdown","quarto"},
+})
+
 -- low level
 lspconfig.clangd.setup({
 	on_attach = function (client, bufnr)

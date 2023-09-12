@@ -1,4 +1,4 @@
-local m = {}
+local M = {}
 local opt = vim.opt
 -- local map = vim.api.nvim_set_keymap
 -- local map_opts = { noremap = true, silent = true}
@@ -25,7 +25,7 @@ opt.keymodel = "startsel,stopsel"
 
 
 -- my custom mappings
-m.customized = {
+M.customized = {
 	n = {
 		["<leader>e"] = {"<cmd> NvimTreeToggle <enter>", "Explore File-Tree"},
 	},
@@ -48,7 +48,7 @@ m.customized = {
 
 -- This following code seems like cheating, the key maps were defined in 'custom.plugins'
 -- however, I could't find a work around the recommended key definition (inside the plugin opts)
-m.incremental_selection = {
+M.incremental_selection = {
 	n = {
 		["<leader>ss"] = {"<leader>ss", "Initiate Selection"},
 	},
@@ -58,9 +58,18 @@ m.incremental_selection = {
 	}
 }
 
+-- ':split term://$SHELL<cr>', 'new terminal' },
+-- ':split term://R<cr>', 'new R terminal' },
+-- ':split term://python<cr>', 'new python terminal' },
+-- ':split term://ipython<cr>', 'new ipython terminal' },
+
+-- 'o```{bash}<cr>```<esc>O', "bash code chunk" },
+-- 'o```{r}<cr>```<esc>O', "r code chunk" },
+-- 'o```{python}<cr>```<esc>O', "python code chunk" },
+
 
 -- my custom way of commenting
-m.comment = {
+M.comment = {
   plugin = true,
 
   -- toggle comment in both modes
@@ -81,4 +90,4 @@ m.comment = {
   },
 }
 
-return m
+return M
