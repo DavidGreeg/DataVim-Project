@@ -175,6 +175,9 @@ local default_plugins = {
           require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
         end,
       },
+	  {
+		"jmbuhr/otter.nvim",
+	  },
 
       -- cmp sources plugins
       {
@@ -183,7 +186,9 @@ local default_plugins = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
-      },
+		"jmbuhr/otter.nvim", --added this
+	  },
+
     },
     opts = function()
       return require "plugins.configs.cmp"

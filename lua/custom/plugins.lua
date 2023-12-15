@@ -101,7 +101,21 @@ local plugins = {
 		}
 	},
 	{
+		"jmbuhr/otter.nvim",
+		opts = {},
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies =  { "jmbuhr/otter.nvim" },
+		opts = function(_,opts)
+			--@param opts cmp.ConfigSchema 
+			local cmp = require("cmp")
+			opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {{ name = "otter" }} ))
+		end,
+	},
+	{
 		"jpalardy/vim-slime",
+		ft = { "quarto", "markdown", "Rmd" },
 		init = function()
 			vim.b['quarto_is_' .. 'python' .. '_chunk'] = false
 			Quarto_is_in_python_chunk = function()
@@ -120,17 +134,52 @@ local plugins = {
 			endfunction
 			]])
 
-			-- local function mark_terminal()
-			-- 	vim.g.slime_last_channel = vim.b.terminal_job_id
-			-- 	vim.print(vim.g.slime_last_channel)
-			-- end
-			--
-			-- local function set_terminal()
-			-- 	vim.b.slime_config = { jobid = vim.g.slime_last_channel }
-			-- end
-
+			-- slime, neovim terminal
+			vim.g.slime_target = "neovim"
+			vim.g.slime_python_ipython = 1
 			vim.b.slime_cell_delimiter = "```"
 		end
+	},
+	{
+		"nvim-tree/nvim-web-devicons",
+		opts = {
+			override = {
+				R = {
+					icon = "󰟔",
+					color = "#358a5b",
+					cterm_color = "29",
+					name = "R",
+				},
+				Rmd = {
+					icon = "",
+					color = "#43b8a5",
+					cterm_color = "74",
+					name = "Rmd",
+				},
+			},
+			override_by_extension = {
+				["qmd"] = {
+					icon = "",
+					color = "#8e31bf",
+					cterm_color = "90",
+					name = "Quarto",
+				}
+			}
+		}
+		-- require("nvim-web-devicons").set_icon{
+		-- 	R = {
+		-- 		icon = "󰟔",
+		-- 		color = "#358a5b",
+		-- 		cterm_color = "29",
+		-- 		name = "R",
+		-- 	},
+		-- 	Rmd = {
+		-- 		icon = "",
+		-- 		color = "#519aba",
+		-- 		cterm_color = "74",
+		-- 		name = "Rmd",
+		-- 	}
+		-- }
 	}
 }
 return plugins
