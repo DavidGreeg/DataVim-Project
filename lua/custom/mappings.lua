@@ -7,6 +7,7 @@ local opt = vim.opt
 -- this opt enables visual mode whenever pressing shift:
 opt.keymodel = "startsel,stopsel"
 
+
 -- to disable keymaps
 M.disabled = {
 	n = {
@@ -199,6 +200,9 @@ M.repl = {
 				vim.b.slime_config = { jobid = vim.g.slime_channel3 }
 				print("Set to: Terminal 3 with ID " .. vim.g.slime_channel3)
 			end, "Set Terminal 3"},
+	},
+	v = {
+		["<A-t>s"] = {":SlimeSend<enter>","Send to Terminal current Code Chunk"},
 	}
 }
 

@@ -115,7 +115,7 @@ local plugins = {
 	},
 	{
 		"jpalardy/vim-slime",
-		ft = { "quarto", "markdown", "Rmd" },
+		ft = { "quarto", "markdown", "Rmd", "lua" },
 		init = function()
 			vim.b['quarto_is_' .. 'python' .. '_chunk'] = false
 			Quarto_is_in_python_chunk = function()
@@ -156,6 +156,18 @@ local plugins = {
 					cterm_color = "74",
 					name = "Rmd",
 				},
+				ipynb = {
+					icon = "󰌠",
+					color = "#5583b8",
+					cterm_color = "74",
+					name = "ipynb",
+				},
+				csv = {
+					icon = "",
+					color = "#a17d54",
+					cterm_color = "74",
+					name = "CSV",
+				},
 			},
 			override_by_extension = {
 				["qmd"] = {
@@ -163,7 +175,13 @@ local plugins = {
 					color = "#8e31bf",
 					cterm_color = "90",
 					name = "Quarto",
-				}
+				},
+				["tsv"] = {
+					icon = "",
+					color = "#a17f24",
+					cterm_color = "90",
+					name = "TSV",
+				},
 			}
 		}
 		-- require("nvim-web-devicons").set_icon{
