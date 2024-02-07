@@ -202,7 +202,7 @@ M.repl = {
 			end, "Set Terminal 3"},
 	},
 	v = {
-		["<A-t>s"] = {":SlimeSend<enter>","Send to Terminal current Code Chunk"},
+		["<A-t>s"] = {":SlimeSend<enter>","Send Selection to Terminal (from Visual Mode)"},
 	}
 }
 
