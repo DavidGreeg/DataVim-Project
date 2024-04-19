@@ -1,0 +1,199 @@
+
+
+n  <Space>rh   *@<Lua 10183: ~/.config/nvim/lua/core/mappings.lua:428>
+                 Reset hunk
+n  <Space>td   *@<Lua 10182: ~/.config/nvim/lua/core/mappings.lua:449>
+                 Toggle deleted
+n  <Space>gb   *@<Lua 10193: ~/.config/nvim/lua/core/mappings.lua:442>
+                 Blame line
+n  <Space>ph   *@<Lua 10174: ~/.config/nvim/lua/core/mappings.lua:435>
+                 Preview hunk
+n  [c          *@<Lua 10185: ~/.config/nvim/lua/core/mappings.lua:413>
+                 Jump to prev hunk
+n  ]c          *@<Lua 10175: ~/.config/nvim/lua/core/mappings.lua:399>
+                 Jump to next hunk
+n  <Tab>       * <Lua 122: ~/.config/nvim/lua/core/mappings.lua:81>
+                 Goto next buffer
+n  <Esc>       * :noh <CR>
+                 Clear highlights
+n  <Space>fÞ   * <Nop>
+n  <Space>f    * <Cmd>lua require("which-key").show(" f", {mode = "n", auto = true})<CR>
+n  <Space>Þ    * <Nop>
+n  <Space>     * <Cmd>lua require("which-key").show(" ", {mode = "n", auto = true})<CR>
+n  <Space>cÞ   * <Nop>
+n  <Space>c    * <Cmd>lua require("which-key").show(" c", {mode = "n", auto = true})<CR>
+n  <Space>tÞ   * <Nop>
+n  <Space>t    * <Cmd>lua require("which-key").show(" t", {mode = "n", auto = true})<CR>
+n  <Space>wÞ   * <Nop>
+n  <Space>pÞ   * <Nop>
+n  <Space>mÞ   * <Nop>
+n  <Space>gÞ   * <Nop>
+n  <Space>rÞ   * <Nop>
+n  <Space>cc   * <Lua 402: ~/.config/nvim/lua/core/mappings.lua:376>
+                 Jump to current context
+n  <Space>x    * <Lua 90: ~/.config/nvim/lua/core/mappings.lua:96>
+                 Close buffer
+n  <Space>v    * <Lua 126: ~/.config/nvim/lua/core/mappings.lua:343>
+                 New vertical term
+n  <Space>h    * <Lua 77: ~/.config/nvim/lua/core/mappings.lua:336>
+                 New horizontal term
+n  <Space>e    * <Cmd> NvimTreeFocus <CR>
+                 Focus nvimtree
+n  <Space>/    * <Lua 76: ~/.config/nvim/lua/core/mappings.lua:110>
+                 Toggle comment
+n  <Space>fa   * <Cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>
+                 Find all
+n  <Space>fz   * <Cmd> Telescope current_buffer_fuzzy_find <CR>
+                 Find in current buffer
+n  <Space>ma   * <Cmd> Telescope marks <CR>
+                 telescope bookmarks
+n  <Space>ff   * <Cmd> Telescope find_files <CR>
+                 Find files
+n  <Space>fo   * <Cmd> Telescope oldfiles <CR>
+                 Find oldfiles
+n  <Space>th   * <Cmd> Telescope themes <CR>
+                 Nvchad themes
+n  <Space>fh   * <Cmd> Telescope help_tags <CR>
+                 Help page
+n  <Space>pt   * <Cmd> Telescope terms <CR>
+                 Pick hidden term
+n  <Space>fb   * <Cmd> Telescope buffers <CR>
+                 Find buffers
+n  <Space>gt   * <Cmd> Telescope git_status <CR>
+                 Git status
+n  <Space>fw   * <Cmd> Telescope live_grep <CR>
+                 Live grep
+n  <Space>cm   * <Cmd> Telescope git_commits <CR>
+                 Git commits
+n  <Space>wk   * <Lua 120: ~/.config/nvim/lua/core/mappings.lua:362>
+                 Which-key query lookup
+n  <Space>wK   * <Lua 59: ~/.config/nvim/lua/core/mappings.lua:356>
+                 Which-key all keymaps
+n  <Space>rn   * <Cmd> set rnu! <CR>
+                 Toggle relative number
+n  <Space>n    * <Cmd> set nu! <CR>
+                 Toggle line number
+n  <Space>b    * <Cmd> enew <CR>
+                 New buffer
+n  <Space>ch   * <Cmd> NvCheatsheet <CR>
+                 Mapping cheatsheet
+n  <Space>fm   * <Lua 3: ~/.config/nvim/lua/core/mappings.lua:50>
+                 LSP formatting
+n  !iÞ         * <Nop>
+n  !aÞ         * <Nop>
+n  !Þ          * <Nop>
+n  !           * <Cmd>lua require("which-key").show("!", {mode = "n", auto = true})<CR>
+n  "           * <Cmd>lua require("which-key").show("\"", {mode = "n", auto = true})<CR>
+n  &           * :&&<CR>
+                 Nvim builtin
+n  '           * <Cmd>lua require("which-key").show("'", {mode = "n", auto = true})<CR>
+n  <iÞ         * <Nop>
+n  <aÞ         * <Nop>
+n  <Þ          * <Nop>
+n  <           * <Cmd>lua require("which-key").show("<", {mode = "n", auto = true})<CR>
+n  >iÞ         * <Nop>
+n  >aÞ         * <Nop>
+n  >Þ          * <Nop>
+n  >           * <Cmd>lua require("which-key").show(">", {mode = "n", auto = true})<CR>
+n  Y           * y$
+                 Nvim builtin
+n  [Þ          * <Nop>
+n  [           * <Cmd>lua require("which-key").show("[", {mode = "n", auto = true})<CR>
+n  ]Þ          * <Nop>
+n  ]           * <Cmd>lua require("which-key").show("]", {mode = "n", auto = true})<CR>
+n  `           * <Cmd>lua require("which-key").show("`", {mode = "n", auto = true})<CR>
+n  ciÞ         * <Nop>
+n  caÞ         * <Nop>
+n  cÞ          * <Nop>
+n  c           * <Cmd>lua require("which-key").show("c", {mode = "n", auto = true})<CR>
+n  dÞ          * <Nop>
+n  d           * <Cmd>lua require("which-key").show("d", {mode = "n", auto = true})<CR>
+n  diÞ         * <Nop>
+n  daÞ         * <Nop>
+n  gÞ          * <Nop>
+n  g           * <Cmd>lua require("which-key").show("g", {mode = "n", auto = true})<CR>
+n  gcA         * <Lua 7606: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:218>
+                 Comment insert end of line
+n  gcO         * <Lua 7602: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:179>
+                 Comment insert above
+n  gco         * <Lua 7624: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:182>
+                 Comment insert below
+n  gbc         * <Lua 7629: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/init.lua:107>
+                 Comment toggle current block
+n  gcc         * <Lua 7598: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/init.lua:103>
+                 Comment toggle current line
+n  gb          * <Plug>(comment_toggle_blockwise)
+                 Comment toggle blockwise
+n  gc          * <Plug>(comment_toggle_linewise)
+                 Comment toggle linewise
+n  g~iÞ        * <Nop>
+n  g~aÞ        * <Nop>
+n  g~Þ         * <Nop>
+n  guiÞ        * <Nop>
+n  guaÞ        * <Nop>
+n  guÞ         * <Nop>
+n  gUiÞ        * <Nop>
+n  gUaÞ        * <Nop>
+n  gUÞ         * <Nop>
+n  j           * v:count || mode(1)[0:1] == "no" ? "j" : "gj"
+                 Move down
+n  k           * v:count || mode(1)[0:1] == "no" ? "k" : "gk"
+                 Move up
+n  vÞ          * <Nop>
+n  v           * <Cmd>lua require("which-key").show("v", {mode = "n", auto = true})<CR>
+n  viÞ         * <Nop>
+n  vi          * <Cmd>lua require("which-key").show("vi", {mode = "n", auto = true})<CR>
+n  vaÞ         * <Nop>
+n  yiÞ         * <Nop>
+n  yaÞ         * <Nop>
+n  yÞ          * <Nop>
+n  y           * <Cmd>lua require("which-key").show("y", {mode = "n", auto = true})<CR>
+n  zfiÞ        * <Nop>
+n  zfaÞ        * <Nop>
+n  zfÞ         * <Nop>
+n  zÞ          * <Nop>
+n  z           * <Cmd>lua require("which-key").show("z", {mode = "n", auto = true})<CR>
+n  <C-W>Þ      * <Nop>
+n  <C-W>       * <Cmd>lua require("which-key").show("\23", {mode = "n", auto = true})<CR>
+n  <Plug>PlenaryTestFile * :lua require('plenary.test_harness').test_directory(vim.fn.expand("%:p"))<CR>
+n  <Plug>(comment_toggle_blockwise_count) * <Lua 37: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:246>
+                 Comment toggle blockwise with count
+n  <Plug>(comment_toggle_linewise_count) * <Lua 52: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:246>
+                 Comment toggle linewise with count
+n  <Plug>(comment_toggle_blockwise_current) * <Lua 53: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:246>
+                 Comment toggle current block
+n  <Plug>(comment_toggle_linewise_current) * <Lua 54: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:246>
+                 Comment toggle current line
+n  <Plug>(comment_toggle_blockwise) * <Lua 55: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:246>
+                 Comment toggle blockwise
+n  <Plug>(comment_toggle_linewise) * <Lua 56: ~/.local/share/nvim/lazy/Comment.nvim/lua/Comment/api.lua:246>
+                 Comment toggle linewise
+   <Plug>luasnip-expand-repeat * <Lua 528: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:35>
+n  <Plug>luasnip-delete-check * <Lua 530: ~/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua:28>
+n  <S-Tab>     * <Lua 121: ~/.config/nvim/lua/core/mappings.lua:88>
+                 Goto prev buffer
+n  <M-v>       * <Lua 127: ~/.config/nvim/lua/core/mappings.lua:328>
+                 Toggle vertical term
+n  <M-h>       * <Lua 62: ~/.config/nvim/lua/core/mappings.lua:321>
+                 Toggle horizontal term
+n  <M-i>       * <Lua 78: ~/.config/nvim/lua/core/mappings.lua:314>
+                 Toggle floating term
+n  <C-N>       * <Cmd> NvimTreeToggle <CR>
+                 Toggle nvimtree
+n  <C-H>       * <C-W>h
+                 Window left
+n  <Up>        * v:count || mode(1)[0:1] == "no" ? "k" : "gk"
+                 Move up
+n  <Down>      * v:count || mode(1)[0:1] == "no" ? "j" : "gj"
+                 Move down
+n  <C-C>       * <Cmd> %y+ <CR>
+                 Copy whole file
+n  <C-K>       * <C-W>k
+                 Window up
+n  <C-S>       * <Cmd> w <CR>
+                 Save file
+n  <C-J>       * <C-W>j
+                 Window down
+n  <C-L>       * <C-W>l
+                 Window right
+
